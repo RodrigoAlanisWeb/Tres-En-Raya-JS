@@ -11,9 +11,13 @@ board.forEach(element => {
 
             if (turn == 1) {
                 i.textContent = 'x'
-                i.classList.add('red')
             } else if (turn == 2) {
                 i.textContent = 'o'
+            }
+
+            if (i.textContent === 'x') {
+                i.classList.add('red')
+            } else if (i.textContent === 'o') {
                 i.classList.add('blue')
             }
             verify(board, turn)

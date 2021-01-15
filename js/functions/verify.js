@@ -71,6 +71,8 @@ function end(turn, board) {
     board.forEach(element => {
         element.forEach(i => {
             i.textContent = ''
+            i.classList.remove('blue');
+            i.classList.remove('red');
         });
     });
     document.querySelector('.win').innerHTML = `El Jugador ${turn} gana`
